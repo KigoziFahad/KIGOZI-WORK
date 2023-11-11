@@ -1,0 +1,45 @@
+<form id="form-submit" method="post" action="{% url 'index' %}">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset>
+                <label for="{{ form.from_location.id_for_label }}">From:</label>
+                {{ form1.from_location }}
+            </fieldset>                                            
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <label for="{{ form.to_location.id_for_abel }}">To:</label>
+                {{ form1.to_location }}
+            </fieldset>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <label for="{{ form.departure_date.id_for_label }}">Departure date:</label>
+                {{ form1.departure_date }}
+            </fieldset>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <label for="{{ form.return_date.id_for_label }}">Return date:</label>
+                {{ form1.return_date }}
+            </fieldset>
+        </div>
+        <div class="col-md-6">
+            <div class="radio-select">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label for="{{ form.trip_type.id_for_label }}">TRIP TYPE:</label>
+                        {{ form1.trip_type }}
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <button type="submit" id="form-submit" class="btn">Order Ticket
+                    Now</button>
+            </fieldset>
+        </div>
+    </div>
+</form>
